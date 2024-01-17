@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    /* background-color: black; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.main{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #3B4664;
+}
+
+.container h2{
+    color: white;
+    margin-bottom: 15px;
+}
+
+.display-area #inputarea{
+    text-align: right;
+    background-color: #181F32;
+    color: white;
+    border-radius: 12px;
+    /* height: 110px; */
+    width: 22vw;
+    padding: 15px 25px;
+    font-size: 3.5vw;
+    font-weight: 700;
+    
+    box-shadow: 0px 4px 4px 0px #00000040;
+    border: none;
+    outline: none;
+
+    margin-bottom: 15px;
+}
+#inputarea[readonly]{
+    color: white;
+}
+
+.btns{
+    background-color: #252D44;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+
+}
+.row1,
+.row2,
+.row3,
+.row4,
+.row5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    gap: 1vw;
+}
+
+.key, .add-key, .sub-key,
+.dot-key, .divide-key, .mul-key{
+    height: 6vh;
+    width: 4vw;
+    /* padding: 8px 22px; */
+    background-color: #fff;
+    border-radius: 12px;
+    color: #3B4664;
+    font-weight: 700;
+
+    /* margin-right: 20px; */
+
+    box-shadow: 0px 4px 4px 0px #00000040;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    
+}
+.del-key, .reset-key, .ans-key{
+    font-size: 18px;
+    /* padding: 10px 15px; */
+    height: 6vh;
+    width: 4vw;
+    background-color: #647299;
+    font-weight: 700;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0px 4px 4px 0px #00000040;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.reset-key{
+    /* padding: 10px 30px; */
+    width: 9vw;
+}
+.ans-key{
+    background-color: #D13F30;
+    width: 9vw;
+    /* padding: 10px 40px; */
+}
+
+
+
+@media (max-width:500px) {
+    .display-area #inputarea{
+        width: 80vw;
+        font-size: 10vw;
+    }
+
+    .key, .add-key, .sub-key,
+    .dot-key, .divide-key, .mul-key, .del-key{
+        width: 14vw;
+    }
+    .reset-key, .ans-key{
+        width: 30vw;
+    }
+    .row1,
+    .row2,
+    .row3,
+    .row4,
+    .row5,
+    .btns{
+        gap: 2.5vw;
+    }
+}
